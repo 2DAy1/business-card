@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Даниїл Долинський — Викладач програмування для дітей та дорослих</title>
+  <meta name="description" content="Навчаю дітей і дорослих програмуванню через реальні проєкти. Перше заняття безкоштовно. Python, Django, HTML, CSS, JavaScript, React, C++, Scratch, Minecraft Education, Pygame." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fafc; --card:#ffffff; --ink:#0f172a; --muted:#475569;
+      --brand:#2563eb; --brand-2:#22c55e; --ring:rgba(37,99,235,.35);
+      --shadow:0 20px 60px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:1060px;margin:auto;padding:28px}
+    .card{background:var(--card);border-radius:20px;box-shadow:var(--shadow)}
+    .btn{display:inline-flex;align-items:center;gap:10px;border-radius:12px;padding:14px 18px;font-weight:700;border:2px solid transparent;background:var(--brand);color:#fff}
+    .btn.secondary{background:#fff;color:var(--brand);border-color:var(--brand)}
+    .btn:focus,.btn:hover{box-shadow:0 0 0 6px var(--ring)}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:360px 1fr;gap:32px;align-items:center;padding:28px}
+    .heroPhoto{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;border:6px solid #e2e8f0}
+    .hero h1{font-size:40px;line-height:1.1;margin:0 0 8px;font-weight:800}
+    .tagline{font-size:18px;color:var(--muted);margin-bottom:16px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+    .chip{background:#eef2ff;color:#3730a3;font-weight:600;border-radius:999px;padding:6px 10px;font-size:13px}
+    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+
+    /* WHY */
+    .why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:22px}
+    .why .item{background:#f8fafc;border:1px solid #e5e7eb;border-radius:14px;padding:16px}
+    .why .ttl{font-weight:800;margin:0 0 6px}
+    .why p{margin:0;color:var(--muted)}
+
+    /* TRACKS */
+    .tracks{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:22px}
+    .tracks .cardInner{padding:18px}
+    .tracks h3{margin:0 0 8px}
+    .tracks ul{margin:0;padding-left:18px;color:var(--muted)}
+
+    /* PRICING */
+    .pricing{display:flex;gap:16px;flex-wrap:wrap;padding:22px}
+    .pill{background:#ecfeff;color:#065f46;border:1px solid #99f6e4;border-radius:12px;padding:10px 14px;font-weight:700}
+    .pill.free{background:#ecfccb;border:1px solid #bef264;color:#166534}
+
+    /* PORTFOLIO */
+    .portfolio{padding:22px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .thumb{background:#e2e8f0;border-radius:14px;min-height:120px;display:grid;place-items:center;color:#334155;font-weight:700}
+
+    /* REVIEWS */
+    .reviews{padding:22px}
+    .revGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    .rev{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:16px}
+    .rev .name{font-weight:800;margin-bottom:6px}
+    .rev p{margin:0;color:var(--muted)}
+
+    /* CONTACT */
+    .contact{display:grid;grid-template-columns:2fr 1fr;gap:18px;padding:22px}
+    .contact .cardInner{padding:18px}
+    .contactList{display:grid;gap:8px;color:var(--muted)}
+    .qr{width:200px;height:200px;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;background:#fff}
+
+    footer{margin:28px 0;color:var(--muted);text-align:center;font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .why{grid-template-columns:1fr}
+      .tracks{grid-template-columns:1fr}
+      .grid3,.revGrid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
+
+    /* print */
+    @media print{
+      body{background:#fff}
+      .btn{display:none}
+      .card{box-shadow:none;border:1px solid #e5e7eb}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section class="card hero" aria-label="Головний блок">
+      <img class="heroPhoto" src="photo.jpg" alt="Фото: Даниїл Долинський" />
+      <div>
+        <h1>Даниїл Долинський</h1>
+        <div class="tagline">Вчу дітей і дорослих програмуванню через реальні проєкти. Перше заняття — безкоштовно.</div>
+        <div class="chips" aria-label="Технології">
+          <span class="chip">Python</span><span class="chip">Django</span><span class="chip">Flask</span><span class="chip">FastAPI</span>
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React</span>
+          <span class="chip">C++</span><span class="chip">Scratch</span><span class="chip">Minecraft Edu</span><span class="chip">Pygame</span>
+        </div>
+        <div class="ctaRow">
+          <a class="btn" href="https://t.me/dan_dolynsky" target="_blank" rel="noopener">Записатися в Telegram</a>
+          <a class="btn secondary" href="https://github.com/2DAy1" target="_blank" rel="noopener">GitHub портфоліо</a>
+          <a class="btn secondary" href="tel:+380676324000">Подзвонити</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ME -->
+    <section class="card why" aria-label="Чому я">
+      <div class="item"><div class="ttl">Практика > Теорія</div><p>3 роки досвіду як розробник і викладач. Усе через практичні завдання.</p></div>
+      <div class="item"><div class="ttl">Дітям зрозуміло</div><p>Пояснюю просто і через проєкти: ігри, сайти, Telegram‑боти.</p></div>
+      <div class="item"><div class="ttl">Міні‑групи</div><p>До 5 осіб, щоб кожен отримав увагу. Індивідуальні — теж є.</p></div>
+    </section>
+
+    <!-- TRACKS -->
+    <section class="tracks" aria-label="Напрямки навчання">
+      <div class="card"><div class="cardInner">
+        <h3>Для дітей</h3>
+        <ul>
+          <li>Scratch, Minecraft Education, Pygame</li>
+          <li>Створюємо ігри та прості сайти</li>
+          <li>Формуємо алгоритмічне мислення</li>
+        </ul>
+      </div></div>
+      <div class="card"><div class="cardInner">
+        <h3>Для дорослих</h3>
+        <ul>
+          <li>Python, Django/Flask/FastAPI, HTML/CSS/JS, React</li>
+          <li>Портфоліо, резюме, підготовка до співбесід</li>
+          <li>Кар’єрний план та менторство</li>
+        </ul>
+      </div></div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="card pricing" aria-label="Вартість">
+      <div class="pill">Індивідуальні: 600 грн/год</div>
+      <div class="pill">Групові: 300 грн/год</div>
+      <div class="pill free">Перше заняття — безкоштовно</div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <!-- <section class="card portfolio" aria-label="Приклади робіт">
+      <h3>Приклади робіт / демонстрації</h3>
+      <div class="grid3">
+        <a class="thumb" href="https://github.com/2DAy1" target="_blank" rel="noopener">GitHub</a>
+        <a class="thumb" href="#" target="_blank" rel="noopener">Проєкт 1 (додай посилання)</a>
+        <a class="thumb" href="#" target="_blank" rel="noopener">Проєкт 2 (додай посилання)</a>
+      </div>
+    </section> -->
+
+    <!-- REVIEWS -->
+    <!-- <section class="card reviews" aria-label="Відгуки">
+      <h3>Відгуки батьків і студентів</h3>
+      <div class="revGrid">
+        <div class="rev"><div class="name">Марина, мама 10‑річного Віталія</div><p>«Син чекає кожне заняття! Уже зробили свою першу гру. Пояснює дуже доступно.»</p></div>
+        <div class="rev"><div class="name">Олег, студент</div><p>«Допоміг розібратися з Python і підготував до співбесіди. Отримав першу роботу стажером.»</p></div>
+        <div class="rev"><div class="name">Ірина, мама Софії</div><p>«Чудовий підхід до дітей. Видно прогрес уже за місяць занять.»</p></div>
+      </div>
+    </section> -->
+
+    <!-- CONTACT -->
+    <section class="card contact" aria-label="Контакти">
+      <div class="cardInner">
+        <h3>Записатися на пробне заняття</h3>
+        <p class="muted">Найзручніше писати у Telegram. Також можна подзвонити.</p>
+        <div class="ctaRow">
+          <a class="btn" href="https://t.me/dan_dolynsky" target="_blank" rel="noopener">Написати в Telegram</a>
+          <a class="btn secondary" href="tel:+380676324000">+380676324000</a>
+          <a class="btn secondary" href="https://github.com/2DAy1" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="cardInner" style="display:grid;place-items:center">
+        <div>
+          <div style="font-weight:800;margin:0 0 8px">Швидкий QR</div>
+          <div class="qr">
+            <img alt="QR на Telegram @dan_dolynsky" width="200" height="200"
+                 src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Ft.me%2Fdan_dolynsky" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> Даниїл Долинський • Програмування для дітей та дорослих • Збережіть як PDF через Друк</footer>
+  </main>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
